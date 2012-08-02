@@ -1,0 +1,7 @@
+{% if phones %}
+    {% for phone in phones %}
+        {{phone.extension}} {{phone.name}}<br/>
+    {% endfor %}
+{% else %}
+    <p>No phones are available.</p>
+{% endif %}

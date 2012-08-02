@@ -1,0 +1,15 @@
+.hgignore
+.hg/
+
+*.elc
+*.swp
+*.swo
+*.pyc
+*~
+
+protected_media/
+logs/
+tmp/
+
+src/db_settings.py
+

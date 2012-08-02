@@ -1,0 +1,1 @@
+python /home/astertools/src/manage.py runfcgi outlog='/home/astertools/logs/fastcgi_out.log' errlog='/home/astertools/logs/fastcgi_err.log' pidfile='/home/astertools/tmp/fastcgi_pid' host=127.0.0.1 port=7778
