@@ -18,7 +18,8 @@ cp fastcgi.conf /etc/nginx/django_fastcgi.conf
 
 #python
 yum -y install python-setuptools python-devel python-flup python-sqlite2
-easy_install MySQL-python
+yum install MySQL-python
+#easy_install MySQL-python
 
 #django
 cd /tmp
