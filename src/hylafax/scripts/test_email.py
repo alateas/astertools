@@ -19,7 +19,7 @@ try:
     # send_mail('Subject here', 'Here is the message.', 'fax@lenmontag.ru', ['dmitrymashkin@gmail.com'], fail_silently=False)
 
     email = EmailMessage('Subject here', 'Here is the message.', 'fax@lenmontag.ru', ['dmitrymashkin@gmail.com'])
-    email.attach_file('/home/alateas/test.sh')
+    email.attach_file('/opt/astertools/src/urls.py')
     email.send()
 
     logging.info('email sended')

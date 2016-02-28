@@ -1,4 +1,4 @@
 yum -y install git
-cd /home
+cd /opt
 git clone git://github.com/alateas/astertools.git astertools
 sh astertools/scripts/install/install.sh $*
