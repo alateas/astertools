@@ -50,7 +50,7 @@ cd /opt/astertools
 chmod -R 777 tmp logs protected_media
 
 #adding to startup
-chkconfig nginx on
+/sbin/chkconfig nginx on
 echo -e "sh /opt/astertools/scripts/runfcgi.sh" >> /etc/rc.d/rc.local
 
 #start
