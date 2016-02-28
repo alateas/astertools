@@ -2,7 +2,7 @@ import os
 from sys import argv,exit,path
 
 from django.core.management import setup_environ
-path.append('/home/astertools/src')
+path.append('/opt/astertools/src')
 import settings
 setup_environ(settings)
 

@@ -7,7 +7,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 #from addons.ext_m2m import ExtManyToManyField, m2m_post_save
 
-logging.basicConfig(filename='/home/astertools/logs/debug.log', level=logging.ERROR)
+logging.basicConfig(filename='/opt/astertools/logs/debug.log', level=logging.ERROR)
 
 class FaxDev(models.Model):
     dev_name = models.CharField(max_length=255)

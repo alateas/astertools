@@ -5,10 +5,10 @@ from sys import argv,exit,path
 
 now = datetime.datetime.now().strftime("%d/%m/%Y %H:%m")
 
-logging.basicConfig(filename='/home/astertools/logs/email.log', level=logging.DEBUG)
+logging.basicConfig(filename='/opt/astertools/logs/email.log', level=logging.DEBUG)
 try:
     from django.core.management import setup_environ
-    path.append('/home/astertools/src')
+    path.append('/opt/astertools/src')
     import settings
     setup_environ(settings)
 

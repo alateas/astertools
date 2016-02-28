@@ -48,7 +48,7 @@
     // METO EL FAX EN LA BASE DE DATOS?
 
     fax_info_insert($name_pdf,$modemdev,$commID,$errormsg,$company_name,$company_number,'in',"recvd/$pathDB");
-    echo `python /home/astertools/src/hylafax/scripts/store_fax.py $pdffile $company_number $modemdev`;
+    echo `python /opt/astertools/src/hylafax/scripts/store_fax.py $pdffile $company_number $modemdev`;
     faxes_log ("faxrcvd> Se copio el $name_pdf en la ruta $faxes_path/recvd/$pathDB y se grabo en la BD.");
     /**********************************************
      *         3) ENVIO EMAIL                     *

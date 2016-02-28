@@ -5,7 +5,7 @@ then
 fi
     
 #folder structure
-cd /home/astertools
+cd /opt/astertools
 mkdir tmp tmp/python_eggs logs protected_media protected_media/faxes
 
 #nginx
@@ -33,8 +33,8 @@ mysql -u root --password=$1 -e "create database astertools";
 
 
 #setup
-cd /home/astertools/src
-cat /home/astertools/scripts/install/db_settings.py | sed -e "s/<password>/$1/" > db_settings.py
+cd /opt/astertools/src
+cat /opt/astertools/scripts/install/db_settings.py | sed -e "s/<password>/$1/" > db_settings.py
 python manage.py syncdb --noinput
 python hylafax/scripts/fax_devs_init.py
 python manage.py createsuperuser --username admin --email dmitrymashkin@gmail.com --noinput
@@ -43,15 +43,15 @@ python manage.py changepassword admin
 #adding to hylafax faxrcvd script
 cd /var/spool/hylafax/bin
 mv -f faxrcvd-elastix.php faxrcvd-elastix.php.bak
-cp /home/astertools/scripts/install/faxrcvd-elastix.php faxrcvd-elastix.php
+cp /opt/astertools/scripts/install/faxrcvd-elastix.php faxrcvd-elastix.php
 
 #permissions
-cd /home/astertools
+cd /opt/astertools
 chmod -R 777 tmp logs protected_media
 
 #adding to startup
 chkconfig nginx on
-echo -e "sh /home/astertools/scripts/runfcgi.sh" >> /etc/rc.d/rc.local
+echo -e "sh /opt/astertools/scripts/runfcgi.sh" >> /etc/rc.d/rc.local
 
 #start
-sh /home/astertools/scripts/nginx_run.sh
+sh /opt/astertools/scripts/nginx_run.sh

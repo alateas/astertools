@@ -8,13 +8,13 @@ from django.core.mail import EmailMessage
 
 now = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
 
-logging.basicConfig(filename='/home/astertools/logs/fax.log', level=logging.INFO)
+logging.basicConfig(filename='/opt/astertools/logs/fax.log', level=logging.INFO)
 logging.debug(now + '|executed!')
 logging.debug('args: %s' % argv)
 
 try:
     from django.core.management import setup_environ
-    path.append('/home/astertools/src')
+    path.append('/opt/astertools/src')
     import settings
     setup_environ(settings)
 

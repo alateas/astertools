@@ -1,6 +1,6 @@
 # Django settings for astertools project.
 import os 
-os.environ['PYTHON_EGG_CACHE'] = '/home/astertools/tmp/python_eggs' 
+os.environ['PYTHON_EGG_CACHE'] = '/opt/astertools/tmp/python_eggs' 
 
 from db_settings import *
 from db_settings_asterisk import *
@@ -45,10 +45,10 @@ USE_L10N = True
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/home/astertools/src/media'
+MEDIA_ROOT = '/opt/astertools/src/media'
 MEDIA_URL = '/m/'
 
-PROTECTED_MEDIA_ROOT = '/home/astertools/protected_media'
+PROTECTED_MEDIA_ROOT = '/opt/astertools/protected_media'
 PROTECTED_MEDIA_URL = '/p/'
 
 ADMIN_MEDIA_PREFIX = '/static/admin/'
@@ -85,7 +85,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "/home/astertools/src/templates",
+    "/opt/astertools/src/templates",
 )
 
 #DATABASE_ROUTERS = ['db_router', ]
@@ -130,4 +130,4 @@ EMAIL_HOST = 'lenmontag.ru'
 EMAIL_HOST_USER = '6004791@lenmontag.ru'
 EMAIL_HOST_PASSWORD = 'fax6004791'
 
-FIXTURE_DIRS = ('/home/astertools/src/pbx/fixtures', )
+FIXTURE_DIRS = ('/opt/astertools/src/pbx/fixtures', )
